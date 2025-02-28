@@ -1,0 +1,57 @@
+import pygame, sys
+from pygame.locals import *
+
+AMPLE = 800
+ALT = 800
+TAMANY = (AMPLE,ALT)
+CYAN = (0,255,255)
+RED = (255,0,0)
+GREEN = (109, 159, 0)
+BLUE = (17, 140, 180)
+INDIGO = (128,0,128)
+ORANGE = (255,102,0)
+YELLOW = (255,255,0)
+VIOLET = (127,0,255)
+GREY =(128,128,128)
+MAROON =(128,0,0)
+BLACK =(0,0,0)
+WHITE = (255,255,255)
+OLIVE =(128,128,0)
+CYAN =(0,255,255)
+PINK =(255,192,203)
+MAGENTA =(255,0,255)
+TAN =(210,180,140)
+TEAÍ =(0,128,128)
+
+
+pygame.init()
+pantalla = pygame.display.set_mode(TAMANY)
+pygame.display.set_caption('Color de fons')
+while True: # main game loop
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    pantalla.fill(WHITE)
+
+    pygame.draw.circle(pantalla, BLUE, (400, 400), 200)
+    pygame.draw.circle(pantalla, WHITE, (330, 350), 50)
+    pygame.draw.circle(pantalla, WHITE, (470, 350), 50)
+    pygame.draw.circle(pantalla, BLACK, (330, 350), 20)
+    pygame.draw.circle(pantalla, BLACK, (470, 350), 20)
+    pygame.draw.circle(pantalla, PINK, (400, 400), 15)
+    pygame.draw.arc(pantalla, BLACK, (330, 450, 140, 80), 3.14, 6.28, 5)
+    pygame.draw.arc(pantalla, BLUE, (300, 450, 200, 200), 0, 3.14, 0)
+    pygame.draw.line(pantalla, BLACK, (300, 280), (360, 300), 5)
+    pygame.draw.line(pantalla, BLACK, (440, 300), (500, 280), 5)
+    pygame.draw.line(pantalla, BLACK, (250, 420), (310, 420), 3)
+    pygame.draw.line(pantalla, BLACK, (250, 440), (310, 430), 3)
+    pygame.draw.line(pantalla, BLACK, (250, 400), (310, 410), 3)
+    pygame.draw.line(pantalla, BLACK, (490, 420), (550, 420), 3)
+    pygame.draw.line(pantalla, BLACK, (490, 440), (550, 450), 3)
+    pygame.draw.line(pantalla, BLACK, (490, 400), (550, 390), 3)
+    pygame.draw.polygon(pantalla, BLUE, [(280, 250), (330, 200), (360, 280)])
+    pygame.draw.polygon(pantalla, BLUE, [(520, 250), (470, 200), (440, 280)])
+
+    pygame.display.update()
