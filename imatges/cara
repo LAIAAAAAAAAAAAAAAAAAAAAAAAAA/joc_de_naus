@@ -44,24 +44,24 @@ while True:
         eye_closed = not eye_closed
         last_blink_time = current_time
 
-    # Cambiar el color de fondo a rosa
+
     pantalla.fill(PINK)
 
-    # Dibujar la cara azul
+
     pygame.draw.circle(pantalla, BLUE, (400, 400), 200)
 
-    # Añadir el círculo blanco más abajo, cerca de la boca
+
     pygame.draw.circle(pantalla, WHITE, (400, 480), 100)
 
-    # Dibujar el collar (semicírculo rojo más abajo)
+
     pygame.draw.arc(pantalla, RED, (300, 520, 200, 100), 3.14, 0, 10)
 
-    # Dibujar la campana (círculo amarillo más abajo)
-    pygame.draw.circle(pantalla, YELLOW, (400, 610), 20)  # Ajusté la posición y a 610
-    pygame.draw.line(pantalla, BLACK, (390, 620), (410, 620), 3)  # Línea de la campana ajustada
-    pygame.draw.circle(pantalla, BLACK, (400, 625), 5)  # Pequeño círculo negro ajustado
 
-    # Dibujar los ojos (mecanismo de parpadeo)
+    pygame.draw.circle(pantalla, YELLOW, (400, 610), 20)
+    pygame.draw.line(pantalla, BLACK, (390, 620), (410, 620), 3)
+    pygame.draw.circle(pantalla, BLACK, (400, 625), 5)
+
+
     if eye_closed:
         pygame.draw.line(pantalla, BLACK, (280, 350), (380, 350), 5)
         pygame.draw.circle(pantalla, WHITE, (470, 350), 50)
@@ -72,18 +72,18 @@ while True:
         pygame.draw.circle(pantalla, WHITE, (470, 350), 50)
         pygame.draw.circle(pantalla, BLACK, (470, 350), 20)
 
-    # Dibujar la nariz
+
     pygame.draw.circle(pantalla, RED, (400, 400), 15)
 
-    # Dibujar la boca
+
     pygame.draw.arc(pantalla, BLACK, (330, 450, 140, 80), 3.14, 6.28, 5)
     pygame.draw.arc(pantalla, BLUE, (300, 450, 200, 200), 0, 3.14, 0)
 
-    # Dibujar las cejas
+
     pygame.draw.line(pantalla, BLACK, (300, 280), (360, 300), 5)
     pygame.draw.line(pantalla, BLACK, (440, 300), (500, 280), 5)
 
-    # Dibujar los bigotes
+
     pygame.draw.line(pantalla, BLACK, (250, 420), (310, 420), 3)
     pygame.draw.line(pantalla, BLACK, (250, 440), (310, 430), 3)
     pygame.draw.line(pantalla, BLACK, (250, 400), (310, 410), 3)
@@ -91,10 +91,70 @@ while True:
     pygame.draw.line(pantalla, BLACK, (490, 440), (550, 450), 3)
     pygame.draw.line(pantalla, BLACK, (490, 400), (550, 390), 3)
 
-    # Dibujar las orejas
+
     pygame.draw.polygon(pantalla, BLUE, [(280, 250), (330, 200), (360, 280)])
     pygame.draw.polygon(pantalla, BLUE, [(520, 250), (470, 200), (440, 280)])
 
+
+    start_x = 290
+    start_y = 650
+
+
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y, 10, 40))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y, 20, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y + 30, 20, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 30, start_y + 10, 10, 20))
+
+
+    start_x += 50
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y, 30, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y + 30, 30, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y + 10, 10, 20))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 20, start_y + 10, 10, 20))
+
+
+    start_x += 50
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y, 10, 40))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y, 20, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y + 10, 20, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 30, start_y + 20, 10, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y + 30, 10, 10))
+
+    start_x += 50
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y + 10, 10, 30))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 20, start_y + 10, 10, 30))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y, 10, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y + 20, 10, 10))
+
+
+    start_x += 50
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y, 10, 40))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y, 20, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y + 10, 20, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y + 30, 20, 10))
+
+
+    start_x += 50
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y, 10, 40))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y + 10, 10, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 20, start_y + 10, 10, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 30, start_y, 10, 40))
+
+
+    start_x += 50
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y, 30, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y + 30, 30, 10))
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y + 10, 10, 20))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 20, start_y + 10, 10, 20))
+
+    start_x += 50
+    pygame.draw.rect(pantalla, BLACK, (start_x, start_y, 10, 40))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 10, start_y + 10, 10, 20))
+    pygame.draw.rect(pantalla, BLACK, (start_x + 20, start_y, 10, 40))
+
+
     pygame.display.update()
     clock.tick(60)
+
+
 
