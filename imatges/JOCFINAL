@@ -5,7 +5,6 @@ import pygame
 AMPLADA = 800
 ALTURA = 600
 BACKGROUND_IMAGE = 'assets/fondo.png'
-MUSICA_FONS = 'assets/musica.mp3'
 WHITE = (255,255,255)
 MAGENTA = (255,0,255)
 GREEN = (0,255,0)
@@ -53,6 +52,8 @@ temps_ultima_bala_jugador2 = 0 #per contar el temps que ha passat des de que ha 
 
 
 pygame.init()
+pygame.mixer.music.load('assets/musicajoc.mp3')
+pygame.mixer.music.play()
 pantalla = pygame.display.set_mode((AMPLADA, ALTURA))
 pygame.display.set_caption("Arcade")
 
@@ -131,7 +132,7 @@ while True:
                 if event.key == K_SPACE:
                     vides_jugador1 = 3
                     vides_jugador2 = 3
-                    pantalla_actual = 3
+                    pantalla_actual = 1
 
 
 
@@ -144,10 +145,14 @@ while True:
                 if event.key == K_w and current_time - temps_ultima_bala_jugador1 >= temps_entre_bales:
                     bales_jugador1.append(pygame.Rect(player_rect.centerx - 2, player_rect.top, 4, 10))
                     temps_ultima_bala_jugador1 = current_time
+                    pygame.mixer.music.load('assets/sobala.mp3')
+                    pygame.mixer.music.play()
                 # jugador 2
                 if event.key == K_UP and current_time - temps_ultima_bala_jugador2 >= temps_entre_bales:
                     bales_jugador2.append(pygame.Rect(player_rect2.centerx - 2, player_rect2.bottom -10, 4, 10))
                     temps_ultima_bala_jugador2 = current_time
+                    pygame.mixer.music.load('assets/sobala.mp3')
+                    pygame.mixer.music.play()
 
     if pantalla_actual == 4:
         imprimir_pantalla_fons('assets/gameover.png')
