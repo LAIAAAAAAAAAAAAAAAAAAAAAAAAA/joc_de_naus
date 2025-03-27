@@ -77,8 +77,8 @@ def show_credits():
     text3 = "Música:"
     text4 = "Sons:"
     text5 = "Laia Brú"
-    text6 = "After Burner 3 - Sega"
-    text7 = "Freesound.org"
+    text6 = "Game Music"
+    text7 = "SCI FI GUN SHOT"
     font0 = pygame.font.SysFont(None, 140)
     font1 = pygame.font.SysFont(None, 60)
     font2 = pygame.font.SysFont(None, 50)
